@@ -1,10 +1,13 @@
-"""Core logic for a tiny word-counter app."""
+"""Core logic for a tiny word-counter app.
 
-from typing import Dict
+Notes:
+ - Keep annotations simple to avoid AST parsing issues in older astroid
+   versions used by some CI images.
+"""
 
 
-def count_words(text: str) -> dict[str, int]:
-    """Return a dict with word counts for the given text.
+def count_words(text: str):
+    """Return a plain dict with word counts for the given text.
 
     Words are split on whitespace and normalized to lower-case. Empty input
     returns an empty dict.
@@ -12,7 +15,7 @@ def count_words(text: str) -> dict[str, int]:
     if not text:
         return {}
 
-    counts: Dict[str, int] = {}
+    counts = {}
     for token in text.split():
         word = token.strip().lower()
         if not word:
@@ -21,7 +24,7 @@ def count_words(text: str) -> dict[str, int]:
     return counts
 
 
-def most_common(counts: dict[str, int], n: int = 1):
+def most_common(counts, n: int = 1):
     """Return the n most common words as a list of (word, count).
 
     If n <= 0, returns an empty list.
