@@ -22,7 +22,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     text = " ".join(args.text)
     counts = count_words(text)
-    top = most_common(counts, n=args.top)
+    # pass the value positionally to avoid relying on the old keyword name
+    top = most_common(counts, args.top)
     for word, cnt in top:
         print(f"{word}: {cnt}")
 
