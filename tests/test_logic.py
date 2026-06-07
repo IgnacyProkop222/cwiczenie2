@@ -1,4 +1,3 @@
-
 import os
 import sys
 
@@ -10,17 +9,17 @@ from app import logic
 
 
 def test_count_words_empty():
-	assert logic.count_words("") == {}
+    assert logic.count_words("") == {}
 
 
 def test_count_words_basic():
-	text = "Hello hello world"
-	counts = logic.count_words(text)
-	assert counts.get("hello") == 2
-	assert counts.get("world") == 1
+    text = "Hello hello world"
+    counts = logic.count_words(text)
+    assert counts.get("hello") == 2
+    assert counts.get("world") == 1
 
 
 def test_most_common():
-	counts = {"a": 5, "b": 2, "c": 3}
-	top1 = logic.most_common(counts, 1)
-	assert top1 == [("a", 5)]
+    counts = {"a": 5, "b": 2, "c": 3}
+    top1 = logic.most_common(counts, 1)
+    assert top1 == [("a", 5)]
