@@ -3,7 +3,7 @@
 from typing import Dict
 
 
-def count_words(text: str) -> Dict[str, int]:
+def count_words(text: str) -> dict[str, int]:
     """Return a dict with word counts for the given text.
 
     Words are split on whitespace and normalized to lower-case. Empty input
@@ -21,7 +21,7 @@ def count_words(text: str) -> Dict[str, int]:
     return counts
 
 
-def most_common(counts: Dict[str, int], n: int = 1):
+def most_common(counts: dict[str, int], n: int = 1):
     """Return the n most common words as a list of (word, count).
 
     If n <= 0, returns an empty list.

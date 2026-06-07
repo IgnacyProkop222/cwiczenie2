@@ -6,4 +6,4 @@ max-line-length=88
 
 [MESSAGES CONTROL]
 # Let Black handle formatting concerns
-disable=C0330,C0301
+disable=C0301
