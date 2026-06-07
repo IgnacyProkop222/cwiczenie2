@@ -3,7 +3,9 @@ import sys
 
 # Ensure the project's `src` directory is on sys.path so imports like
 # `from app import logic` work when running tests from the repository root.
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+)
 
 from app import logic
 
