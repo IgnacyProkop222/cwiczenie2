@@ -29,10 +29,16 @@ jobs:
           python -m pip install -r requirements.txt
 
       - name: Format check
-        run: bash scripts/format_check.sh
+        run: |
+          source .venv/bin/activate
+          bash scripts/format_check.sh
 
       - name: Lint
-        run: bash scripts/lint.sh
+        run: |
+          source .venv/bin/activate
+          bash scripts/lint.sh
 
       - name: Test with pytest
-        run: bash scripts/test.sh
+        run: |
+          source .venv/bin/activate
+          bash scripts/test.sh
