@@ -1,0 +1,4 @@
+black>=24.3.0
+# Keep pylint in 2.x series (compatible with modern Python versions).
+pylint>=2.15.0,<3
+pytest>=7.4.0

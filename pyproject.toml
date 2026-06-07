@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "cwiczenie2"
+version = "0.1.0"
+description = "Exercise repo with simple CLI and logic for CI practice"
+authors = ["student <student@example.com>"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.pylint]
+# Pylint configuration placed in pyproject for readability. Note: some pylint
+# versions may prefer a dedicated .pylintrc file; this keeps settings near other
+# tooling config and ensures the line-length is in sync.
+max-line-length = 88
+

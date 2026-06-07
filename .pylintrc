@@ -1,0 +1,9 @@
+[MASTER]
+ignore=venv,.venv
+
+[FORMAT]
+max-line-length=88
+
+[MESSAGES CONTROL]
+# Let Black handle formatting concerns
+disable=C0301
